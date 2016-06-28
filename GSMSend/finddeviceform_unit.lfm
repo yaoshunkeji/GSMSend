@@ -1,0 +1,94 @@
+object FindDeviceForm: TFindDeviceForm
+  Left = 477
+  Height = 222
+  Top = 181
+  Width = 438
+  Caption = '查找'
+  ClientHeight = 222
+  ClientWidth = 438
+  OnClose = FormClose
+  OnCreate = FormCreate
+  Position = poMainFormCenter
+  LCLVersion = '5.6'
+  object Model: TLabeledEdit
+    Left = 12
+    Height = 27
+    Top = 36
+    Width = 156
+    EditLabel.AnchorSideLeft.Control = Model
+    EditLabel.AnchorSideTop.Side = asrCenter
+    EditLabel.AnchorSideRight.Control = Model
+    EditLabel.AnchorSideRight.Side = asrBottom
+    EditLabel.AnchorSideBottom.Control = Model
+    EditLabel.Left = 12
+    EditLabel.Height = 17
+    EditLabel.Top = 16
+    EditLabel.Width = 156
+    EditLabel.Caption = '型号'
+    EditLabel.ParentColor = False
+    TabOrder = 0
+    Text = 'Model'
+  end
+  object IMEI: TLabeledEdit
+    Left = 180
+    Height = 27
+    Top = 36
+    Width = 152
+    EditLabel.AnchorSideLeft.Control = IMEI
+    EditLabel.AnchorSideRight.Control = IMEI
+    EditLabel.AnchorSideRight.Side = asrBottom
+    EditLabel.AnchorSideBottom.Control = IMEI
+    EditLabel.Left = 180
+    EditLabel.Height = 17
+    EditLabel.Top = 16
+    EditLabel.Width = 152
+    EditLabel.Caption = 'IMEI'
+    EditLabel.ParentColor = False
+    TabOrder = 1
+    Text = '0123456789012345'
+  end
+  object IMSI: TLabeledEdit
+    Left = 16
+    Height = 27
+    Top = 84
+    Width = 152
+    EditLabel.AnchorSideLeft.Control = IMSI
+    EditLabel.AnchorSideRight.Control = IMSI
+    EditLabel.AnchorSideRight.Side = asrBottom
+    EditLabel.AnchorSideBottom.Control = IMSI
+    EditLabel.Left = 16
+    EditLabel.Height = 17
+    EditLabel.Top = 64
+    EditLabel.Width = 152
+    EditLabel.Caption = 'IMSI'
+    EditLabel.ParentColor = False
+    TabOrder = 2
+    Text = '0123456789012345'
+  end
+  object ButtonPanel1: TButtonPanel
+    Left = 6
+    Height = 40
+    Top = 176
+    Width = 426
+    OKButton.Name = 'OKButton'
+    OKButton.Caption = '查找'
+    OKButton.DefaultCaption = False
+    HelpButton.Name = 'HelpButton'
+    HelpButton.DefaultCaption = True
+    CloseButton.Name = 'CloseButton'
+    CloseButton.DefaultCaption = True
+    CancelButton.Name = 'CancelButton'
+    CancelButton.DefaultCaption = True
+    TabOrder = 3
+    ShowButtons = [pbOK, pbCancel]
+  end
+  object Label1: TLabel
+    Left = 0
+    Height = 51
+    Top = 119
+    Width = 438
+    Align = alBottom
+    Caption = '  当入网太多时，可以查找定位,'#10'  3个条件，只支持一个条件，不使用的条件项留空'#10'  条件都是精确查找(不是模糊判断),不区分大小写'
+    ParentColor = False
+  end
+end

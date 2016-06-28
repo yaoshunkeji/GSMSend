@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <Version Value="9"/>
+    <BuildModes Active="Default"/>
+    <Units Count="14">
+      <Unit0>
+        <Filename Value="keygen.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="44" Y="21"/>
+        <UsageCount Value="35"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="keygenform_unit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="KeyGen_Form"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="KeyGenForm_Unit"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="233"/>
+        <CursorPos X="40" Y="248"/>
+        <UsageCount Value="35"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="fununit.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="133"/>
+        <UsageCount Value="15"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="regunit.pas"/>
+        <UnitName Value="RegUnit"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="963"/>
+        <CursorPos Y="984"/>
+        <UsageCount Value="14"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="dmunit.pas"/>
+        <ComponentName Value="DataModule1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="134"/>
+        <CursorPos X="29" Y="136"/>
+        <UsageCount Value="14"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="/usr/lib/codetyphon/fpcsrc/rtl/objpas/classes/classesh.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="660"/>
+        <CursorPos X="19" Y="682"/>
+        <UsageCount Value="10"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="crc8_unit.pas"/>
+        <UnitName Value="CRC8_Unit"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="27"/>
+        <CursorPos X="15" Y="35"/>
+        <UsageCount Value="9"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="crc16_unit.pas"/>
+        <UnitName Value="CRC16_Unit"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="35" Y="11"/>
+        <UsageCount Value="10"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="/usr/lib/codetyphon/typhon/lcl/interfaces/gtk2/gtk2proc.inc"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="9"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="/usr/lib/codetyphon/fpcsrc/rtl/objpas/classes/stringl.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="902"/>
+        <CursorPos X="34" Y="925"/>
+        <UsageCount Value="9"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="pdu_unit.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="567"/>
+        <CursorPos Y="583"/>
+        <UsageCount Value="10"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="/usr/lib/codetyphon/fpcsrc/rtl/inc/mathh.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="9"/>
+        <CursorPos X="14" Y="30"/>
+        <UsageCount Value="12"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="commfununit.pas"/>
+        <UnitName Value="CommFunUnit"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="17"/>
+        <UsageCount Value="10"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="../Comm/pdu_unit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="-1"/>
+        <CursorPos X="-1" Y="-1"/>
+        <UsageCount Value="21"/>
+      </Unit13>
+    </Units>
+    <JumpHistory HistoryIndex="-1"/>
+  </ProjectSession>
+  <Debugging>
+    <BreakPoints Count="4">
+      <Item1>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="fununit.pas"/>
+        <Line Value="270"/>
+      </Item1>
+      <Item2>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="fununit.pas"/>
+        <Line Value="263"/>
+      </Item2>
+      <Item3>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="fununit.pas"/>
+        <Line Value="1227"/>
+      </Item3>
+      <Item4>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="regunit.pas"/>
+        <Line Value="1026"/>
+      </Item4>
+    </BreakPoints>
+  </Debugging>
+</CONFIG>

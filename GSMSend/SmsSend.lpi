@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectOptions>
+    <Version Value="9"/>
+    <General>
+      <SessionStorage Value="InProjectDir"/>
+      <MainUnit Value="0"/>
+      <Title Value="短信猫作弊"/>
+      <ResourceType Value="res"/>
+      <UseXPManifest Value="True"/>
+      <XPManifest>
+        <ExecutionLevel Value="2"/>
+        <UseCompatibilityVista Value="True"/>
+        <UseCompatibilityWin7 Value="True"/>
+        <UseCompatibilityWin8 Value="True"/>
+        <UseCompatibilityWin81 Value="True"/>
+        <UseCompatibilityWin10 Value="True"/>
+      </XPManifest>
+      <Icon Value="0"/>
+    </General>
+    <i18n>
+      <EnableI18N LFM="False"/>
+    </i18n>
+    <VersionInfo>
+      <UseVersionInfo Value="True"/>
+      <AutoIncrementBuild Value="True"/>
+      <MajorVersionNr Value="1"/>
+      <BuildNr Value="148"/>
+      <Language Value="0804"/>
+      <Attributes pvaPreRelease="True"/>
+      <StringTable ProductVersion=""/>
+    </VersionInfo>
+    <CustomData Count="15">
+      <Item0 Name="lazpackager/copyright" Value="2015"/>
+      <Item1 Name="lazpackager/deb/ppa" Value="ppa:johndoe/use-your-own"/>
+      <Item2 Name="lazpackager/deb/series" Value="precise"/>
+      <Item3 Name="lazpackager/deb/tpl_changelog" Value="?PACKAGE_NAME? (?FULLVERSION?) ?SERIES?; urgency=low
+
+  * Original version ?VERSION? packaged with lazdebian
+
+ -- ?MAINTAINER? &lt;?MAINTAINER_EMAIL?>  ?DATER?
+"/>
+      <Item4 Name="lazpackager/deb/tpl_control" Value="Source: ?PACKAGE_NAME?
+Maintainer: ?MAINTAINER? &lt;?MAINTAINER_EMAIL?>
+Section: misc
+Priority: optional
+Standards-Version: 3.9.3
+Build-Depends: fpc, lazarus, lcl, lcl-utils, debhelper (>= 8)
+
+Package: ?PACKAGE_NAME?
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends},
+Description: ?DESCRIPTION?
+ ?DESCRIPTION_LONG?
+"/>
+      <Item5 Name="lazpackager/deb/tpl_copyright" Value="Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+
+Files: *
+Copyright: ?COPYRIGHT?
+License: GPL-2+
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 2 of the License, or
+ at your option) any later version.
+ .
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License along
+ with this program; if not, write to the Free Software Foundation, Inc.,
+ 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ .
+ On Debian systems, the full text of the GNU General Public
+ License version 2 can be found in the file
+ /usr/share/common-licenses/GPL-2
+"/>
+      <Item6 Name="lazpackager/deb/tpl_rules" Value="#!/usr/bin/make -f
+
+ROOT = $(CURDIR)/debian/?PACKAGE_NAME?
+
+override_dh_auto_clean:
+	$(RM) -r lib
+	$(RM) lib *.res ?EXECUTABLE?
+
+override_dh_auto_build:
+	typhoonbuild ?PROJECT?
+
+override_dh_auto_install:
+	install -d -m 755 $(ROOT)/usr/bin
+	install -s -m 755 ?EXECUTABLE? $(ROOT)/usr/bin
+
+%:
+	dh $@
+"/>
+      <Item7 Name="lazpackager/description" Value="this is a program"/>
+      <Item8 Name="lazpackager/description_long" Value="long description may not be empty!"/>
+      <Item9 Name="lazpackager/export_cmd" Value="?CP? *.lpi ?TEMPFOLDER?/
+?CP? *.lpr ?TEMPFOLDER?/
+?CP? *.pas ?TEMPFOLDER?/
+?CP? *.lfm ?TEMPFOLDER?/
+?CP? *.ico ?TEMPFOLDER?/
+"/>
+      <Item10 Name="lazpackager/maintainer" Value="John Doe"/>
+      <Item11 Name="lazpackager/maintainer_email" Value="john_doe@example.invalid"/>
+      <Item12 Name="lazpackager/package_name" Value="debian-package-name"/>
+      <Item13 Name="lazpackager/tpl_makefile" Value="PREFIX = /usr/local
+
+# debuild will set DESTDIR to the fakeroot path and
+# in the override rules we will change PREFIX to /usr
+BINDIR = $(DESTDIR)$(PREFIX)/bin
+
+.PHONY : all
+all:
+	typhoonbuild ?PROJECT?
+
+.PHONY : clean
+clean:
+	$(RM) -r lib
+	$(RM) *.res
+	$(RM) ?EXECUTABLE?
+
+.PHONY : install
+install:
+	mkdir -p $(BINDIR)
+	install -s ?EXECUTABLE? $(BINDIR)/
+"/>
+      <Item14 Name="lazpackager/use_existing_makefile" Value="False"/>
+    </CustomData>
+    <BuildModes Count="1">
+      <Item1 Name="Default" Default="True"/>
+      <SharedMatrixOptions Count="1">
+        <Item1 ID="517671222907" Modes="Default" Value="-dEnableUTF8RTL"/>
+      </SharedMatrixOptions>
+    </BuildModes>
+    <PublishOptions>
+      <Version Value="2"/>
+    </PublishOptions>
+    <RunParams>
+      <local>
+        <FormatVersion Value="1"/>
+        <LaunchingApplication PathPlusParams="/usr/bin/gnome-terminal -t 'Typhon Run Output' -e '$(TargetCmdLine)'"/>
+      </local>
+    </RunParams>
+    <RequiredPackages Count="10">
+      <Item1>
+        <PackageName Value="lz_memds"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="pl_excontrols"/>
+      </Item2>
+      <Item3>
+        <PackageName Value="bs_Controls"/>
+      </Item3>
+      <Item4>
+        <PackageName Value="LCL"/>
+      </Item4>
+      <Item5>
+        <PackageName Value="pl_luicontrols"/>
+      </Item5>
+      <Item6>
+        <PackageName Value="FCL"/>
+      </Item6>
+      <Item7>
+        <PackageName Value="lz_datetimectrls"/>
+      </Item7>
+      <Item8>
+        <PackageName Value="bs_Utils"/>
+      </Item8>
+      <Item9>
+        <PackageName Value="lz_sqldb"/>
+      </Item9>
+      <Item10>
+        <PackageName Value="lz_sqlite3"/>
+      </Item10>
+    </RequiredPackages>
+    <Units Count="26">
+      <Unit0>
+        <Filename Value="SmsSend.lpr"/>
+        <IsPartOfProject Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="mainform_unit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="MainForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="dmunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="DataModule1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="runbtsform_unit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="RunBTSForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="fununit.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="crc8_unit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="CRC8_Unit"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="crc16_unit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="CRC16_Unit"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="crc32_unit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="CRC32_unit"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="process_unit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Process_Unit"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="tcpserverunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TCPServerUnit"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="userimeisetform_unit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="UserImeiSetForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="userimeisetForm_unit"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="regunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="RegUnit"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="servercomm_unit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ServerComm_Unit"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="pdu_unit.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="yatecfg_unit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="YateCFG_Unit"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="findmodemform_unit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FindModemForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="FindModemForm_Unit"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="datafile_unit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="DataFile_Unit"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="pushdata_unit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="PushData_Unit"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="softprotect_unit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="SoftProtect_Unit"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="commfununit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="CommFunUnit"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="superdog_unit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="SuperDog_Unit"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="finddeviceform_unit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FindDeviceForm"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="FindDeviceForm_Unit"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="../Comm/gsm_sms_util.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit22>
+      <Unit23>
+        <Filename Value="loginformunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="LoginForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="LoginFormUnit"/>
+      </Unit23>
+      <Unit24>
+        <Filename Value="chanpasswordform_unit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="chanPassWordForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="chanPassWordForm_Unit"/>
+      </Unit24>
+      <Unit25>
+        <Filename Value="../Comm/setwifiform_unit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="SetWiFiForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="SetWiFiForm_Unit"/>
+      </Unit25>
+    </Units>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="11"/>
+    <Target>
+      <Filename Value="./bin/GSMSend"/>
+    </Target>
+    <SearchPaths>
+      <IncludeFiles Value="$(ProjOutDir)"/>
+      <OtherUnitFiles Value="../Comm"/>
+      <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
+    </SearchPaths>
+    <Parsing>
+      <SyntaxOptions>
+        <SyntaxMode Value="Delphi"/>
+      </SyntaxOptions>
+    </Parsing>
+    <CodeGeneration>
+      <Optimizations>
+        <OptimizationLevel Value="3"/>
+      </Optimizations>
+    </CodeGeneration>
+    <Linking>
+      <Debugging>
+        <StripSymbols Value="True"/>
+      </Debugging>
+      <Options>
+        <Win32>
+          <GraphicApplication Value="True"/>
+        </Win32>
+      </Options>
+    </Linking>
+    <Other>
+      <Verbosity>
+        <ShoLineNum Value="True"/>
+      </Verbosity>
+      <WriteFPCLogo Value="False"/>
+      <CompilerMessages>
+        <IgnoredMessages idx5025="True"/>
+      </CompilerMessages>
+      <CustomOptions Value="-FcUTF8"/>
+    </Other>
+  </CompilerOptions>
+  <Debugging>
+    <Exceptions Count="7">
+      <Item1>
+        <Name Value="EAbort"/>
+      </Item1>
+      <Item2>
+        <Name Value="ECodetoolError"/>
+      </Item2>
+      <Item3>
+        <Name Value="EFOpenError"/>
+      </Item3>
+      <Item4>
+        <Name Value="EDatabaseError"/>
+      </Item4>
+      <Item5>
+        <Name Value="EOSError"/>
+      </Item5>
+      <Item6>
+        <Name Value="RunError(216)"/>
+      </Item6>
+      <Item7>
+        <Name Value="EProcess"/>
+      </Item7>
+    </Exceptions>
+  </Debugging>
+</CONFIG>

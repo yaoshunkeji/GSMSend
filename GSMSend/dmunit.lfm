@@ -1,0 +1,661 @@
+object DataModule1: TDataModule1
+  OnCreate = DataModuleCreate
+  OnDestroy = DataModuleDestroy
+  OldCreateOrder = False
+  Height = 430
+  HorizontalOffset = 253
+  VerticalOffset = 182
+  Width = 602
+  object ds_user_imei: TDataSource
+    DataSet = qry_user_imei
+    left = 132
+    top = 140
+  end
+  object qry_sys_imei: TSqlite3Dataset
+    FileName = '/opt/new/GSMSend/database/basedb.db'
+    PrimaryKey = 'ID'
+    SQL = 'select corp,count(*) as c from imei'
+    TableName = 'imei'
+    left = 44
+    top = 60
+    object qry_sys_imeicorp: TMemoField
+      DisplayLabel = '品牌/公司'
+      FieldKind = fkData
+      FieldName = 'corp'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      OnGetText = qry_sys_imeicorpGetText
+      BlobType = ftMemo
+      Transliterate = False
+    end
+    object qry_sys_imeic: TLongintField
+      DisplayLabel = '数量统计'
+      FieldKind = fkData
+      FieldName = 'c'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+  end
+  object qry_user_imei: TSqlite3Dataset
+    AutoIncrementKey = True
+    FileName = '/opt/new/GSMSend/userdb.db'
+    PrimaryKey = 'ID'
+    SaveOnClose = True
+    SaveOnRefetch = True
+    TableName = 'imei_user'
+    left = 132
+    top = 60
+    object qry_user_imeiID: TLongintField
+      FieldKind = fkData
+      FieldName = 'ID'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qry_user_imeitac: TMemoField
+      DisplayLabel = '串号8/15位'
+      FieldKind = fkData
+      FieldName = 'tac'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      OnGetText = qry_user_imeitacGetText
+      BlobType = ftMemo
+      Transliterate = False
+    end
+    object qry_user_imeimodel: TMemoField
+      DisplayLabel = '型号/记事'
+      FieldKind = fkData
+      FieldName = 'model'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      OnGetText = qry_user_imeimodelGetText
+      BlobType = ftMemo
+      Transliterate = False
+    end
+    object qry_user_imeiModem: TLongintField
+      DisplayLabel = '是否短信猫'
+      FieldKind = fkData
+      FieldName = 'Modem'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+  end
+  object ds_sys_imei: TDataSource
+    AutoEdit = False
+    DataSet = qry_sys_imei
+    left = 40
+    top = 140
+  end
+  object qry_history: TSqlite3Dataset
+    FileName = '/opt/new/GSMSend/userdb.db'
+    PrimaryKey = 'ID'
+    SQL = 'select  *  from history'
+    StoreDefs = True
+    TableName = 'history'
+    FieldDefs = <    
+      item
+        Name = 'to_imei2'
+        DataType = ftString
+        Precision = -1
+        Size = 255
+      end    
+      item
+        Name = 'from_imei2'
+        DataType = ftString
+        Precision = -1
+        Size = 255
+      end    
+      item
+        Name = 'ID'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'fromTel'
+        DataType = ftMemo
+        Precision = -1
+      end    
+      item
+        Name = 'ToTel'
+        DataType = ftMemo
+        Precision = -1
+      end    
+      item
+        Name = 'time'
+        DataType = ftString
+        Precision = -1
+        Size = 255
+      end    
+      item
+        Name = 'to_imsi'
+        DataType = ftMemo
+        Precision = -1
+      end    
+      item
+        Name = 'to_imei'
+        DataType = ftMemo
+        Precision = -1
+      end    
+      item
+        Name = 'from_imsi'
+        DataType = ftMemo
+        Precision = -1
+      end    
+      item
+        Name = 'from_imei'
+        DataType = ftMemo
+        Precision = -1
+      end    
+      item
+        Name = 'Text'
+        DataType = ftMemo
+        Precision = -1
+      end    
+      item
+        Name = 'Encode'
+        DataType = ftMemo
+        Precision = -1
+      end    
+      item
+        Name = 'Mode'
+        DataType = ftInteger
+        Precision = -1
+      end>
+    left = 240
+    top = 60
+    object qry_historyID: TLongintField
+      FieldKind = fkData
+      FieldName = 'ID'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qry_historytime: TStringField
+      DisplayLabel = '时间'
+      FieldKind = fkData
+      FieldName = 'time'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      OnGetText = qry_historytimeGetText
+      Size = 255
+    end
+    object qry_historyfromTel: TMemoField
+      DisplayLabel = '发送号码'
+      FieldKind = fkData
+      FieldName = 'fromTel'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      OnGetText = qry_historyfromTelGetText
+      BlobType = ftMemo
+      Transliterate = False
+    end
+    object qry_historyToTel: TMemoField
+      DisplayLabel = '目标号码'
+      FieldKind = fkData
+      FieldName = 'ToTel'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      OnGetText = qry_historyfromTelGetText
+      BlobType = ftMemo
+      Transliterate = False
+    end
+    object qry_historyto_imsi: TMemoField
+      DisplayLabel = '目标IMSI'
+      FieldKind = fkData
+      FieldName = 'to_imsi'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      OnGetText = qry_historyfromTelGetText
+      BlobType = ftMemo
+      Transliterate = False
+    end
+    object qry_historyto_imei: TMemoField
+      DisplayLabel = '目标串号'
+      FieldKind = fkData
+      FieldName = 'to_imei'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      OnGetText = qry_historyto_imeiGetText
+      BlobType = ftMemo
+      Transliterate = False
+    end
+    object qry_historyfrom_imsi: TMemoField
+      DisplayLabel = '发送IMSI'
+      FieldKind = fkData
+      FieldName = 'from_imsi'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      OnGetText = qry_historyfromTelGetText
+      BlobType = ftMemo
+      Transliterate = False
+    end
+    object qry_historyfrom_imei: TMemoField
+      DisplayLabel = '发送串号'
+      FieldKind = fkData
+      FieldName = 'from_imei'
+      Index = 7
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      OnGetText = qry_historyfrom_imeiGetText
+      BlobType = ftMemo
+      Transliterate = False
+    end
+    object qry_historyMEMO: TMemoField
+      DisplayLabel = '内容'
+      FieldKind = fkData
+      FieldName = 'Text'
+      Index = 8
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      OnGetText = qry_historyMEMOGetText
+      BlobType = ftMemo
+      Transliterate = False
+    end
+    object qry_historyEncode: TMemoField
+      DisplayLabel = '编码'
+      FieldKind = fkData
+      FieldName = 'Encode'
+      Index = 9
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      OnGetText = qry_historyEncodeGetText
+      BlobType = ftMemo
+      Transliterate = False
+    end
+    object qry_historyMode: TLongintField
+      DisplayLabel = '分类'
+      FieldKind = fkData
+      FieldName = 'Mode'
+      Index = 10
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+  end
+  object ds_history: TDataSource
+    AutoEdit = False
+    DataSet = qry_history
+    left = 240
+    top = 140
+  end
+  object SQLite3Connection1: TSQLite3Connection
+    Connected = False
+    LoginPrompt = False
+    DatabaseName = '/opt/new/GSMSend/database/basedb.db'
+    KeepConnection = False
+    Options = []
+    left = 104
+    top = 12
+  end
+  object qry_devinfo: TSqlite3Dataset
+    FileName = '/opt/new/GSMSend/userdb.db'
+    SQL = 'select * from devinfo'
+    TableName = 'devinfo'
+    left = 328
+    top = 60
+    object qry_devinfoID: TLongintField
+      FieldKind = fkData
+      FieldName = 'ID'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qry_devinfoIMEI: TMemoField
+      FieldKind = fkData
+      FieldName = 'IMEI'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      OnGetText = qry_devinfoIMEIGetText
+      BlobType = ftMemo
+      Transliterate = False
+    end
+    object qry_devinfoIMSI: TMemoField
+      FieldKind = fkData
+      FieldName = 'IMSI'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      OnGetText = qry_devinfoIMSIGetText
+      BlobType = ftMemo
+      Transliterate = False
+    end
+    object qry_devinfoTMSI: TMemoField
+      FieldKind = fkData
+      FieldName = 'TMSI'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      OnGetText = qry_devinfoTMSIGetText
+      BlobType = ftMemo
+      Transliterate = False
+    end
+    object qry_devinfoModem: TLongintField
+      DisplayLabel = '猫'
+      FieldKind = fkData
+      FieldName = 'Modem'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qry_devinfoModel: TMemoField
+      DisplayLabel = '型号'
+      FieldKind = fkData
+      FieldName = 'Model'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      OnGetText = qry_devinfoModelGetText
+      BlobType = ftMemo
+      Transliterate = False
+    end
+    object qry_devinfoFindTime: TDateTimeField
+      DisplayLabel = '发现时间'
+      FieldKind = fkData
+      FieldName = 'FindTime'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      OnGetText = qry_devinfoFindTimeGetText
+    end
+    object qry_devinfoLastTime: TDateTimeField
+      DisplayLabel = '最后出现'
+      FieldKind = fkData
+      FieldName = 'LastTime'
+      Index = 7
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      OnGetText = qry_devinfoLastTimeGetText
+      DisplayFormat = 'yy-MM-dd HH:nn:ss'
+    end
+    object qry_devinfoLastRegTime: TDateTimeField
+      DisplayLabel = '最后入网时间'
+      FieldKind = fkData
+      FieldName = 'LastRegTime'
+      Index = 8
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      OnGetText = qry_devinfoLastRegTimeGetText
+    end
+  end
+  object ds_devinfo: TDataSource
+    AutoEdit = False
+    DataSet = qry_devinfo
+    left = 328
+    top = 140
+  end
+  object qry_AutoSend_histimei: TSqlite3Dataset
+    FileName = '/opt/new/GSMSend/userdb.db'
+    SQL = 'select * from devinfo'
+    left = 420
+    top = 60
+    object qry_AutoSend_histimeiID: TLongintField
+      FieldKind = fkData
+      FieldName = 'ID'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qry_AutoSend_histimeiIMEI: TMemoField
+      FieldKind = fkData
+      FieldName = 'IMEI'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      OnGetText = qry_AutoSend_histimeiIMEIGetText
+      BlobType = ftMemo
+      Transliterate = False
+    end
+    object qry_AutoSend_histimeiIMSI: TMemoField
+      FieldKind = fkData
+      FieldName = 'IMSI'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      OnGetText = qry_AutoSend_histimeiIMSIGetText
+      BlobType = ftMemo
+      Transliterate = False
+    end
+    object qry_AutoSend_histimeiTMSI: TMemoField
+      FieldKind = fkData
+      FieldName = 'TMSI'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      OnGetText = qry_AutoSend_histimeiTMSIGetText
+      BlobType = ftMemo
+      Transliterate = False
+    end
+    object qry_AutoSend_histimeiModem: TLongintField
+      DisplayLabel = '猫'
+      FieldKind = fkData
+      FieldName = 'Modem'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object qry_AutoSend_histimeiModel: TMemoField
+      DisplayLabel = '型号'
+      FieldKind = fkData
+      FieldName = 'Model'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      OnGetText = qry_AutoSend_histimeiModelGetText
+      BlobType = ftMemo
+      Transliterate = False
+    end
+    object qry_AutoSend_histimeiFindTime: TDateTimeField
+      DisplayLabel = '找到时间'
+      FieldKind = fkData
+      FieldName = 'FindTime'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      OnGetText = qry_AutoSend_histimeiFindTimeGetText
+    end
+    object qry_AutoSend_histimeiLastTime: TDateTimeField
+      DisplayLabel = '最后出现时间'
+      FieldKind = fkData
+      FieldName = 'LastTime'
+      Index = 7
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      OnGetText = qry_AutoSend_histimeiLastTimeGetText
+    end
+    object qry_AutoSend_histimeiSelect1: TBooleanField
+      DisplayLabel = '选择'
+      FieldKind = fkCalculated
+      FieldName = 'Select'
+      Index = 8
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayValues = 'True;False'
+    end
+  end
+  object ds_AutoSend_histimei: TDataSource
+    AutoEdit = False
+    DataSet = qry_AutoSend_histimei
+    left = 416
+    top = 140
+  end
+  object md_lv1__: TMemDataset
+    Active = True
+    FieldDefs = <    
+      item
+        Name = 'ID'
+        DataType = ftInteger
+      end    
+      item
+        Name = 'model'
+        DataType = ftString
+        Size = 256
+      end    
+      item
+        Name = 'Count'
+        DataType = ftInteger
+      end    
+      item
+        Name = 'Reg'
+        DataType = ftString
+        Size = 100
+      end    
+      item
+        Name = 'IMEI'
+        DataType = ftString
+        Size = 256
+      end    
+      item
+        Name = 'IMSI'
+        DataType = ftString
+        Size = 256
+      end    
+      item
+        Name = 'LastTime'
+        DataType = ftDateTime
+      end    
+      item
+        Name = 'DeviceInfo'
+        DataType = ftLargeint
+      end>
+    left = 40
+    top = 280
+  end
+  object ds_lv1: TDataSource
+    DataSet = md_lv1__
+    left = 40
+    top = 344
+  end
+  object ds_lv2: TDataSource
+    DataSet = md_lv2__
+    left = 112
+    top = 348
+  end
+  object md_lv2__: TMemDataset
+    Active = True
+    FieldDefs = <    
+      item
+        Name = 'ID'
+        DataType = ftInteger
+      end    
+      item
+        Name = 'Model'
+        DataType = ftString
+        Size = 256
+      end    
+      item
+        Name = 'Count'
+        DataType = ftInteger
+      end    
+      item
+        Name = 'IMEI'
+        DataType = ftString
+        Size = 100
+      end    
+      item
+        Name = 'IMSI'
+        DataType = ftString
+        Size = 100
+      end    
+      item
+        Name = 'LastTime'
+        DataType = ftDateTime
+      end    
+      item
+        Name = 'TMSI'
+        DataType = ftString
+        Size = 100
+      end    
+      item
+        Name = 'DeviceInfo'
+        DataType = ftLargeint
+      end>
+    left = 112
+    top = 280
+  end
+  object BufDataset1: TBufDataset
+    FieldDefs = <>
+    left = 216
+    top = 220
+  end
+end

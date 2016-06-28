@@ -1,0 +1,113 @@
+object UserImeiSetForm: TUserImeiSetForm
+  Left = 370
+  Height = 210
+  Top = 202
+  Width = 353
+  BorderStyle = bsDialog
+  Caption = '用户定义串号'
+  ClientHeight = 210
+  ClientWidth = 353
+  Font.CharSet = GB2312_CHARSET
+  Font.Height = -13
+  Font.Name = 'Sans'
+  OnClose = FormClose
+  Position = poOwnerFormCenter
+  LCLVersion = '1.5'
+  object Edit1: TEdit
+    Left = 24
+    Height = 28
+    Top = 40
+    Width = 210
+    OnChange = Edit1Change
+    TabOrder = 0
+    TextHint = 'IMEI'
+  end
+  object Edit2: TEdit
+    Left = 26
+    Height = 28
+    Top = 97
+    Width = 208
+    TabOrder = 1
+  end
+  object Label1: TLabel
+    Left = 26
+    Height = 18
+    Top = 24
+    Width = 98
+    Caption = '串号前8位或全号'
+    ParentColor = False
+  end
+  object Label2: TLabel
+    Left = 26
+    Height = 18
+    Top = 79
+    Width = 88
+    Caption = '型号/记名/备注'
+    ParentColor = False
+  end
+  object ButtonPanel1: TButtonPanel
+    Left = 6
+    Height = 38
+    Top = 166
+    Width = 341
+    OKButton.Name = 'OKButton'
+    OKButton.DefaultCaption = True
+    HelpButton.Name = 'HelpButton'
+    HelpButton.DefaultCaption = True
+    CloseButton.Name = 'CloseButton'
+    CloseButton.DefaultCaption = True
+    CancelButton.Name = 'CancelButton'
+    CancelButton.DefaultCaption = True
+    TabOrder = 2
+    DefaultButton = pbCancel
+    ShowButtons = [pbOK, pbCancel]
+    object Label4: TLabel
+      Left = 0
+      Height = 26
+      Top = 0
+      Width = 174
+      AutoSize = False
+      Caption = '串号，请输入8位或15位'
+      ParentColor = False
+    end
+  end
+  object Label3: TLabel
+    Left = 234
+    Height = 26
+    Top = 42
+    Width = 44
+    Caption = '1231'
+    Font.CharSet = GB2312_CHARSET
+    Font.Color = clMaroon
+    Font.Height = -19
+    Font.Name = 'Sans'
+    Font.Style = [fsBold]
+    Layout = tlCenter
+    ParentBidiMode = False
+    ParentColor = False
+    ParentFont = False
+    Visible = False
+  end
+  object CheckBox1: TCheckBox
+    Left = 26
+    Height = 24
+    Top = 128
+    Width = 130
+    AutoSize = False
+    Caption = '是短信猫'
+    TabOrder = 3
+  end
+  object Label5: TLabel
+    Left = 168
+    Height = 18
+    Top = 24
+    Width = 133
+    Caption = '串号可能输错了,请检查'
+    Font.CharSet = GB2312_CHARSET
+    Font.Color = clRed
+    Font.Height = -13
+    Font.Name = 'Sans'
+    ParentColor = False
+    ParentFont = False
+  end
+end

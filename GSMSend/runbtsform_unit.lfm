@@ -1,0 +1,65 @@
+object RunBTSForm: TRunBTSForm
+  Left = 407
+  Height = 230
+  Top = 204
+  Width = 353
+  BorderStyle = bsDialog
+  Caption = '基站启动中...'
+  ClientHeight = 230
+  ClientWidth = 353
+  OnCreate = FormCreate
+  LCLVersion = '1.5'
+  object Panel1: TPanel
+    Left = 0
+    Height = 50
+    Top = 180
+    Width = 353
+    Align = alBottom
+    ClientHeight = 46
+    ClientWidth = 349
+    TabOrder = 0
+    object Button1: TButton
+      Left = 124
+      Height = 34
+      Top = 4
+      Width = 75
+      Caption = '终止/关闭'
+      TabOrder = 0
+    end
+  end
+  object Panel2: TPanel
+    Left = 0
+    Height = 180
+    Top = 0
+    Width = 353
+    Align = alClient
+    ClientHeight = 176
+    ClientWidth = 349
+    TabOrder = 1
+    object RadioGroup1: TRadioGroup
+      Left = 20
+      Height = 105
+      Top = 12
+      Width = 185
+      AutoFill = True
+      Caption = 'RadioGroup1'
+      ChildSizing.LeftRightSpacing = 6
+      ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+      ChildSizing.EnlargeVertical = crsHomogenousChildResize
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsScaleChilds
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 1
+      ClientHeight = 85
+      ClientWidth = 181
+      Items.Strings = (
+        '1。启动基站'
+        '2。读取各种模块'
+        '3。初始化完成。'
+        '4。启动硬件。。。'
+        '5。信号发射中。。。'
+      )
+      TabOrder = 0
+    end
+  end
+end

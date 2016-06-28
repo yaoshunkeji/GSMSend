@@ -1,0 +1,700 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <Version Value="9"/>
+    <BuildModes Active="Default"/>
+    <Units Count="44">
+      <Unit0>
+        <Filename Value="SmsSend.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="25" Y="4"/>
+        <UsageCount Value="207"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="mainform_unit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="MainForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="3841"/>
+        <CursorPos X="32" Y="3849"/>
+        <UsageCount Value="207"/>
+        <Bookmarks Count="1">
+          <Item0 Y="5978"/>
+        </Bookmarks>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="dmunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="DataModule1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="951"/>
+        <CursorPos X="3" Y="1043"/>
+        <UsageCount Value="207"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="runbtsform_unit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="RunBTSForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="15" Y="3"/>
+        <UsageCount Value="200"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="fununit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="384"/>
+        <CursorPos X="3" Y="388"/>
+        <UsageCount Value="206"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="crc8_unit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="CRC8_Unit"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="65" Y="13"/>
+        <UsageCount Value="200"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="crc16_unit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="CRC16_Unit"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="47" Y="10"/>
+        <UsageCount Value="200"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="crc32_unit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="CRC32_unit"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="209"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="process_unit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Process_Unit"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="563"/>
+        <CursorPos X="37" Y="580"/>
+        <UsageCount Value="210"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="tcpserverunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="TCPServerUnit"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="202"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="userimeisetform_unit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="UserImeiSetForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="userimeisetForm_unit"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="50"/>
+        <CursorPos X="7" Y="82"/>
+        <UsageCount Value="206"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="regunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="RegUnit"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="43" Y="318"/>
+        <UsageCount Value="225"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="servercomm_unit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="ServerComm_Unit"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="236"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="pdu_unit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="414"/>
+        <CursorPos X="20" Y="435"/>
+        <UsageCount Value="227"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="yatecfg_unit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="YateCFG_Unit"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="25" Y="25"/>
+        <UsageCount Value="205"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="findmodemform_unit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FindModemForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="FindModemForm_Unit"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="213"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="datafile_unit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="DataFile_Unit"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="16"/>
+        <CursorPos X="20" Y="25"/>
+        <UsageCount Value="200"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="pushdata_unit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="PushData_Unit"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="33"/>
+        <CursorPos Y="51"/>
+        <UsageCount Value="214"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="softprotect_unit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="SoftProtect_Unit"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="14" Y="3"/>
+        <UsageCount Value="209"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="commfununit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="CommFunUnit"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="103"/>
+        <CursorPos X="61" Y="114"/>
+        <UsageCount Value="209"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="superdog_unit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="SuperDog_Unit"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="46"/>
+        <UsageCount Value="207"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="finddeviceform_unit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FindDeviceForm"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="FindDeviceForm_Unit"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="42"/>
+        <CursorPos X="25" Y="46"/>
+        <UsageCount Value="152"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="../Comm/gsm_sms_util.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="66"/>
+        <CursorPos X="3" Y="88"/>
+        <UsageCount Value="149"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit22>
+      <Unit23>
+        <Filename Value="loginformunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="LoginForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="LoginFormUnit"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="24"/>
+        <CursorPos X="73" Y="32"/>
+        <UsageCount Value="101"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit23>
+      <Unit24>
+        <Filename Value="chanpasswordform_unit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="chanPassWordForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="chanPassWordForm_Unit"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="101"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit24>
+      <Unit25>
+        <Filename Value="../Comm/setwifiform_unit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="SetWiFiForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="SetWiFiForm_Unit"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="158"/>
+        <CursorPos X="23" Y="209"/>
+        <UsageCount Value="35"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit25>
+      <Unit26>
+        <Filename Value="gpsunit.pas"/>
+        <UnitName Value="GpsUnit"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="58" Y="8"/>
+        <UsageCount Value="265"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit26>
+      <Unit27>
+        <Filename Value="testform_unit.pas"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="testForm_Unit"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="15" Y="3"/>
+        <UsageCount Value="192"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit27>
+      <Unit28>
+        <Filename Value="libbladerf.pas"/>
+        <UnitName Value="libbladeRF"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos Y="17"/>
+        <UsageCount Value="189"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit28>
+      <Unit29>
+        <Filename Value="encddecd.pas"/>
+        <UnitName Value="EncdDecd"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="51"/>
+        <CursorPos X="14" Y="73"/>
+        <UsageCount Value="190"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit29>
+      <Unit30>
+        <Filename Value="pushdatathread_unit.pas"/>
+        <UnitName Value="PushDataThread_Unit"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="55"/>
+        <CursorPos X="44" Y="88"/>
+        <UsageCount Value="198"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit30>
+      <Unit31>
+        <Filename Value="/usr/lib/codetyphon/typhon/components/pl_SynapseVS/source/vscomport.pas"/>
+        <UnitName Value="vsComPort"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="96"/>
+        <CursorPos X="14" Y="116"/>
+        <UsageCount Value="1"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit31>
+      <Unit32>
+        <Filename Value="strgrid_unit.pas"/>
+        <UnitName Value="StrGrid_Unit"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="45"/>
+        <CursorPos X="30" Y="73"/>
+        <UsageCount Value="13"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit32>
+      <Unit33>
+        <Filename Value="/usr/lib/codetyphon/fpcsrc/packages/amunits/examples/otherlibs/checkbox.pas"/>
+        <UnitName Value="CheckBoxGad"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="47" Y="11"/>
+        <UsageCount Value="1"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit33>
+      <Unit34>
+        <Filename Value="/usr/lib/codetyphon/typhon/lcl/grids.pas"/>
+        <UnitName Value="Grids"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="104"/>
+        <CursorPos X="3" Y="124"/>
+        <UsageCount Value="3"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit34>
+      <Unit35>
+        <Filename Value="/usr/lib/codetyphon/typhon/lcl/dialogs.pp"/>
+        <UnitName Value="Dialogs"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="489"/>
+        <CursorPos X="10" Y="509"/>
+        <UsageCount Value="31"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit35>
+      <Unit36>
+        <Filename Value="/usr/lib/codetyphon/fpcsrc/rtl/inc/systemh.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1152"/>
+        <CursorPos X="94" Y="1180"/>
+        <UsageCount Value="2"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit36>
+      <Unit37>
+        <Filename Value="/usr/lib/codetyphon/fpcsrc/packages/rtl-extra/src/inc/socketsh.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="17"/>
+        <CursorPos X="3" Y="37"/>
+        <UsageCount Value="1"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit37>
+      <Unit38>
+        <Filename Value="../Comm/tcpserverunit.pas"/>
+        <UnitName Value="TCPServerUnit"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="68"/>
+        <CursorPos X="102" Y="78"/>
+        <UsageCount Value="1"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit38>
+      <Unit39>
+        <Filename Value="/usr/lib/codetyphon/typhon/lcl/controls.pp"/>
+        <UnitName Value="Controls"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="25"/>
+        <CursorPos X="3" Y="47"/>
+        <UsageCount Value="4"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit39>
+      <Unit40>
+        <Filename Value="../Comm/yatecfg_unit.pas"/>
+        <UnitName Value="YateCFG_Unit"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="3" Y="12"/>
+        <UsageCount Value="15"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit40>
+      <Unit41>
+        <Filename Value="../Comm/commfununit.pas"/>
+        <UnitName Value="CommFunUnit"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="210"/>
+        <CursorPos X="12" Y="230"/>
+        <UsageCount Value="11"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit41>
+      <Unit42>
+        <Filename Value="../GPSFind/fununit.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="759"/>
+        <CursorPos X="37" Y="770"/>
+        <UsageCount Value="9"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit42>
+      <Unit43>
+        <Filename Value="../GPSFind/regunit.pas"/>
+        <UnitName Value="RegUnit"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1457"/>
+        <CursorPos X="26" Y="1486"/>
+        <UsageCount Value="9"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit43>
+    </Units>
+    <JumpHistory HistoryIndex="-1"/>
+  </ProjectSession>
+  <Debugging>
+    <BreakPoints Count="37">
+      <Item1>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="/usr/lib/codetyphon/fpcsrc/packages/fcl-process/src/unix/process.inc"/>
+        <Line Value="320"/>
+      </Item1>
+      <Item2>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="regunit.pas"/>
+        <Line Value="910"/>
+      </Item2>
+      <Item3>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="/usr/lib/codetyphon/fpcsrc/packages/fcl-db/src/base/dataset.inc"/>
+        <Line Value="1081"/>
+      </Item3>
+      <Item4>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="fununit.pas"/>
+        <Line Value="589"/>
+      </Item4>
+      <Item5>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="mainform_unit.pas"/>
+        <Line Value="1876"/>
+      </Item5>
+      <Item6>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="mainform_unit.pas"/>
+        <Line Value="1949"/>
+      </Item6>
+      <Item7>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="mainform_unit.pas"/>
+        <Line Value="879"/>
+      </Item7>
+      <Item8>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="mainform_unit.pas"/>
+        <Line Value="897"/>
+      </Item8>
+      <Item9>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="/usr/lib/codetyphon/typhon/lcl/include/customlistview.inc"/>
+        <Line Value="1335"/>
+      </Item9>
+      <Item10>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="/usr/lib/codetyphon/typhon/lcl/include/customlistview.inc"/>
+        <Line Value="254"/>
+      </Item10>
+      <Item11>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="mainform_unit.pas"/>
+        <Line Value="4282"/>
+      </Item11>
+      <Item12>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="mainform_unit.pas"/>
+        <Line Value="5324"/>
+      </Item12>
+      <Item13>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="mainform_unit.pas"/>
+        <Line Value="1616"/>
+      </Item13>
+      <Item14>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="mainform_unit.pas"/>
+        <Line Value="1867"/>
+      </Item14>
+      <Item15>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="mainform_unit.pas"/>
+        <Line Value="1843"/>
+      </Item15>
+      <Item16>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="mainform_unit.pas"/>
+        <Line Value="1649"/>
+      </Item16>
+      <Item17>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="mainform_unit.pas"/>
+        <Line Value="1714"/>
+      </Item17>
+      <Item18>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="regunit.pas"/>
+        <Line Value="1177"/>
+      </Item18>
+      <Item19>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="regunit.pas"/>
+        <Line Value="1233"/>
+      </Item19>
+      <Item20>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="mainform_unit.pas"/>
+        <Line Value="1833"/>
+      </Item20>
+      <Item21>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="mainform_unit.pas"/>
+        <Line Value="1824"/>
+      </Item21>
+      <Item22>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="mainform_unit.pas"/>
+        <Line Value="2050"/>
+      </Item22>
+      <Item23>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="mainform_unit.pas"/>
+        <Line Value="2042"/>
+      </Item23>
+      <Item24>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="mainform_unit.pas"/>
+        <Line Value="1992"/>
+      </Item24>
+      <Item25>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="mainform_unit.pas"/>
+        <Line Value="1873"/>
+      </Item25>
+      <Item26>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="mainform_unit.pas"/>
+        <Line Value="2759"/>
+      </Item26>
+      <Item27>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="regunit.pas"/>
+        <Line Value="644"/>
+      </Item27>
+      <Item28>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="regunit.pas"/>
+        <Line Value="250"/>
+      </Item28>
+      <Item29>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="regunit.pas"/>
+        <Line Value="1419"/>
+      </Item29>
+      <Item30>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="regunit.pas"/>
+        <Line Value="1426"/>
+      </Item30>
+      <Item31>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="regunit.pas"/>
+        <Line Value="1433"/>
+      </Item31>
+      <Item32>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="regunit.pas"/>
+        <Line Value="1440"/>
+      </Item32>
+      <Item33>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="regunit.pas"/>
+        <Line Value="1227"/>
+      </Item33>
+      <Item34>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="regunit.pas"/>
+        <Line Value="1261"/>
+      </Item34>
+      <Item35>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="regunit.pas"/>
+        <Line Value="1278"/>
+      </Item35>
+      <Item36>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="regunit.pas"/>
+        <Line Value="1223"/>
+      </Item36>
+      <Item37>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="regunit.pas"/>
+        <Line Value="1198"/>
+      </Item37>
+    </BreakPoints>
+    <Watches Count="1">
+      <Item1>
+        <Expression Value="S"/>
+      </Item1>
+    </Watches>
+  </Debugging>
+</CONFIG>
