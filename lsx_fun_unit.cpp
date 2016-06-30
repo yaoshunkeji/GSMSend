@@ -1,5 +1,5 @@
 /*
- * FB_fun_unit.h
+ * lsx_fun_unit.h
  *
  *  Created on: 2015年8月20日
  *      Author: vlan1
@@ -10,22 +10,22 @@
   修改位置
   修改代码后，添加
 
-//FB添加修正
-  //FB添加
+//lsx添加修正
+  //lsx添加
 
-  //FB添加完成
+  //lsx添加完成
 
 <1>
 yate/engine/TelEngine.cpp
 
 static void common_output(int level,char* buf) 中添加
 	//printf("================================%s\n",buf);
-//FB添加
+//lsx添加
 	if ( SendData_Log(level,buf) ==0)
 	{
 		return;
 	}
-//FB添加完成
+//lsx添加完成
 
 
 <2>
@@ -89,13 +89,13 @@ TelEngin.cpp->
 		static void common_output(int level,char* buf)
 
 修改日志
-#include "/opt/new/FB_fun_unit.cpp"
+#include "/opt/new/lsx_fun_unit.cpp"
 
 */
 
 
-#ifndef FB_FUN_UNIT_H_
-#define FB_FUN_UNIT_H_
+#ifndef lsx_FUN_UNIT_H_
+#define lsx_FUN_UNIT_H_
 
 
 #include <stdio.h>
@@ -112,23 +112,23 @@ TelEngin.cpp->
 
 
 
-//#define FB_Print_SendData
-#define FB_STOPPrintMSG
-//#define FB_UseGeneralSendList
+//#define lsx_Print_SendData
+#define lsx_STOPPrintMSG
+//#define lsx_UseGeneralSendList
 
-#ifdef FB_STOPPrintMSG
+#ifdef lsx_STOPPrintMSG
 
-    #define FB_DEBUG      		 					 NULL_Code()
-    #define FB_DEBUG_S(a,b)  					 NULL_Code(a,b)
-    #define FB_DEBUG_I(a,b)   					 NULL_Code(a,b)
-    #define FB_DEBUG_ERROR					 NULL_Code()
+    #define lsx_DEBUG      		 					 NULL_Code()
+    #define lsx_DEBUG_S(a,b)  					 NULL_Code(a,b)
+    #define lsx_DEBUG_I(a,b)   					 NULL_Code(a,b)
+    #define lsx_DEBUG_ERROR					 NULL_Code()
 
 #else
 
-    #define FB_DEBUG      		 printf("===========FB====%s:%d,fun=%s\n",__FILE__,__LINE__,__FUNCTION__)
-    #define FB_DEBUG_S(a,b)  printf("===========FB====%s:%d,fun=%s, %s=%s \n",__FILE__,__LINE__,__FUNCTION__,a,(char *)b)
-    #define FB_DEBUG_I(a,b)   printf("===========FB====%s:%d,fun=%s, %s=%d \n",__FILE__,__LINE__,__FUNCTION__,a,b)
-    #define FB_DEBUG_ERROR					 printf("===========FB====%s:%d,fun=%s,ERROR:%s\n",__FILE__,__LINE__,__FUNCTION__,strerror(errno))
+    #define lsx_DEBUG      		 printf("===========lsx====%s:%d,fun=%s\n",__FILE__,__LINE__,__FUNCTION__)
+    #define lsx_DEBUG_S(a,b)  printf("===========lsx====%s:%d,fun=%s, %s=%s \n",__FILE__,__LINE__,__FUNCTION__,a,(char *)b)
+    #define lsx_DEBUG_I(a,b)   printf("===========lsx====%s:%d,fun=%s, %s=%d \n",__FILE__,__LINE__,__FUNCTION__,a,b)
+    #define lsx_DEBUG_ERROR					 printf("===========lsx====%s:%d,fun=%s,ERROR:%s\n",__FILE__,__LINE__,__FUNCTION__,strerror(errno))
 
 #endif
 
@@ -139,18 +139,18 @@ TelEngin.cpp->
 
 #define AppConntErr_AllowNoLogin			//如果定义了。app连接失败，不允许入网
 
-#define FB_GSM_UCS2	0x80000
-#define FB_GSM_8BIT	0x40000
+#define lsx_GSM_UCS2	0x80000
+#define lsx_GSM_8BIT	0x40000
 
 #define MIN(a,b) (((a)<(b))?(a):(b))
 #define MAX(a,b) (((a)>(b))?(a):(b))
 
 
-#define FB_printbuf(a,b,c)  \
+#define lsx_printbuf(a,b,c)  \
 		{	\
-	String tmp_FB_STR;	\
-	tmp_FB_STR.hexify((void * )a,b);	\
-	printf("=========%s: %d ,FUN: %s===Name:%s ,Len:%d Value= %s\n", __FILE__,__LINE__,__FUNCTION__, c,b,tmp_FB_STR.c_str());	\
+	String tmp_lsx_STR;	\
+	tmp_lsx_STR.hexify((void * )a,b);	\
+	printf("=========%s: %d ,FUN: %s===Name:%s ,Len:%d Value= %s\n", __FILE__,__LINE__,__FUNCTION__, c,b,tmp_lsx_STR.c_str());	\
 	}	\
 
 /*
@@ -359,13 +359,13 @@ int SendData_Event(TMsgType Msg,const char *imei,const char * imsi,const char * 
 
 int SendData_h_d(struct TMSG *msg,const void * data,int len,int * conn);		//-1  失败 >=0成功
 
-TSmsInfo  FB_popTick();
-TSmsInfo  FB_popMsg();
+TSmsInfo  lsx_popTick();
+TSmsInfo  lsx_popMsg();
 
-TSmsInfo  FB_MsgList_pop(int Fun);
+TSmsInfo  lsx_MsgList_pop(int Fun);
 
-TSmsInfo FB_GetMsg(char *buf,int len);
-int FB_MsgList_push(TSmsInfo * sms);			//从APP收到发送请求，暂时放在列表中
+TSmsInfo lsx_GetMsg(char *buf,int len);
+int lsx_MsgList_push(TSmsInfo * sms);			//从APP收到发送请求，暂时放在列表中
 
 
 typedef  struct TItem
@@ -377,11 +377,11 @@ typedef  struct TItem
 int GetDataIdx(TItem * item,int arraysize,char * key) ;
 int AnalysisStr(char * str,int strlen,TItem * Item,int arraysize) ;         //IMEI:xxx,IMSI:xxx, 分离
 
-int FB_GetMsg(char *buf,int len, TSmsInfo *msg);
+int lsx_GetMsg(char *buf,int len, TSmsInfo *msg);
 void FREE_SmsInfo( TSmsInfo * sms);     //翻译子项目，不包括sms
 
-int FB_STRCMP(const char *a,const char *b,int Max);				//imei,tmsi等条件判断， 如果有一个空或strlen=0，返回0,  如果有数据，才会，返回strcmp值
-int FB_STRCMP_2(const char *a,const char *b,int Max);					//imei等比较，需要多个条件中一个对上时....当有一个是0时，没对上,继续下一个用
+int lsx_STRCMP(const char *a,const char *b,int Max);				//imei,tmsi等条件判断， 如果有一个空或strlen=0，返回0,  如果有数据，才会，返回strcmp值
+int lsx_STRCMP_2(const char *a,const char *b,int Max);					//imei等比较，需要多个条件中一个对上时....当有一个是0时，没对上,继续下一个用
 
 int HexStr2Bin(const char * hex,unsigned char * bin);				//pdu转成bin
 
@@ -390,8 +390,8 @@ int text2UCS2 (const char * txt,int len,char * pdu);
 
 
 
-void FB_SendSmsOK(TSmsInfo *sms,int ok, char * Reason);    //告诉客户端，发送成功
-void FB_SendSms_Status(const char * SrcTel,const char * DestTmsi,const char * SMSkey,int ok, const char * Reason);    //告诉客户端，发送结果
+void lsx_SendSmsOK(TSmsInfo *sms,int ok, char * Reason);    //告诉客户端，发送成功
+void lsx_SendSms_Status(const char * SrcTel,const char * DestTmsi,const char * SMSkey,int ok, const char * Reason);    //告诉客户端，发送结果
 
 const char * FreeOld_mallocNew(const char * oldstr,const char * newstr,int OnlyNewStrOK);		//释放掉原来的数据，分配新数据
 
@@ -400,4 +400,4 @@ void Msg_SetCheck(TMSG * msg,uint8_t * buf);
 
 int SendData_Log(int level,const char *log) ;			//返回0表示成功发送
 
-#endif /* FB_FUN_UNIT_H_ */
+#endif /* lsx_FUN_UNIT_H_ */
